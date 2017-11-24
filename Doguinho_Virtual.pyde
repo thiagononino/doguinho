@@ -19,7 +19,14 @@ def draw():
     
 def keyPressed():
     if key == ' ':
-        dog.comer()
+        dog.comer(10)
 def mouseClicked():
     if dog.mouseover():
         dog.carinho()
+    if dog.mousetop(540, 10):
+        dog.comer(10)
+    if dog.mousetop(540, 70):
+        dog.comer(5)
+    if dog.mousetop(540, 130):
+        dog.comer(2)
+        

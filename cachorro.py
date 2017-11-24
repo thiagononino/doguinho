@@ -1,7 +1,6 @@
 #coding: utf-8
 import random
 from mensagens import Mensageiro
-import math
 
 class Cachorro:
     def __init__(self, nome, idade, cor, secsu, notif, patas = 4):
@@ -33,9 +32,16 @@ class Cachorro:
             return True
         else:
             return False
+    def mousetop(self, x, y):
+        dy = mouseY - y
+        dx = mouseX - x
+        if dy >= 0 and dy < 51 and dx >= 0 and dx < 51:
+            return True
+        else:
+            return False
     
-    def comer(self):
-        self.fome += 10
+    def comer(self, food):
+        self.fome += food
         self.notif.novaMsg(self.nome + ' comeu!')
         if self.fome > 90:
             self.notif.novaMsg(self.nome + ' não quer comer')
@@ -49,6 +55,11 @@ class Cachorro:
         h = w
         fill (self.cor)
         ellipse(x,y,w,h)
+        rect(540, 10, 50, 50)
+        fill(255,0,0)
+        rect(540, 70, 50, 50)
+        fill(0,0,255)
+        rect(540, 130, 50, 50)
         
         self.fome -= 0.005
         self.fome = constrain(self.fome, 0, 100)
