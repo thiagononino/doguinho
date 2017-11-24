@@ -23,6 +23,7 @@ class Cachorro:
         else:
             self.felicidade += 1
             self.notif.novaMsg(self.nome + ' está mais feliz!')
+            
     def mouseover(self):
         x = width/2
         y = height/2
@@ -32,16 +33,17 @@ class Cachorro:
             return True
         else:
             return False
-    def mousetop(self, x, y):
-        dy = mouseY - y
-        dx = mouseX - x
-        if dy >= 0 and dy < 51 and dx >= 0 and dx < 51:
-            return True
-        else:
-            return False
+        
+    #def mousetop(self, x, y):
+    #    dy = mouseY - y
+    #    dx = mouseX - x
+    #    if dy >= 0 and dy < 51 and dx >= 0 and dx < 51:
+    #        return True
+    #    else:
+    #        return False
     
-    def comer(self, food):
-        self.fome += food
+    def comer(self, valor):
+        self.fome += valor
         self.notif.novaMsg(self.nome + ' comeu!')
         if self.fome > 90:
             self.notif.novaMsg(self.nome + ' não quer comer')
@@ -65,11 +67,3 @@ class Cachorro:
         self.fome = constrain(self.fome, 0, 100)
         self.felicidade -= 0.01
         self.felicidade = constrain(self.felicidade, 0, 100)
-        #fill(90,90,90)
-        #rect(10,10,200,30)        
-        #fill(255,0,0)
-        #rect(10,10,self.saude,30)
-        #fill(90,90,90)
-        #rect(10,60,200,30)
-        #fill(0,255,0)
-        #rect(10,60,self.fome,30)

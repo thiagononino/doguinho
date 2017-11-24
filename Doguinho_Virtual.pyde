@@ -17,16 +17,19 @@ def draw():
     notif.update()
     userint.update()
     
-def keyPressed():
-    if key == ' ':
-        dog.comer(10)
+#def keyPressed():
+#    if key == ' ':
+#        dog.comer(10)
+
 def mouseClicked():
     if dog.mouseover():
         dog.carinho()
-    if dog.mousetop(540, 10):
-        dog.comer(10)
-    if dog.mousetop(540, 70):
-        dog.comer(5)
-    if dog.mousetop(540, 130):
-        dog.comer(2)
-        
+#    if dog.mousetop(540, 10):
+#        dog.comer(10)
+#    if dog.mousetop(540, 70):
+#        dog.comer(5)
+#    if dog.mousetop(540, 130):
+#        dog.comer(2)
+#    dog.botao(540,10,dog.comer(10), color(0,255,0))
+#    dog.botao(540,70,dog.comer(5), color(100,100,0))
+# dog.botao(540,130,dog.comer(2), color(0,100,100))
